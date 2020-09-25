@@ -52,7 +52,7 @@ fun DIV.generateLinks() {
         style = "font-size: 1rem"
 
         div {
-            classes = setOf("col-12", "col-sm-4", "mx-auto", "mt-2")
+            classes = setOf("col-12", "col-sm-6", "mx-auto", "mt-2")
             a{
                 href = "https://www.facebook.com/hsnu.computer.research.club"
                 img {
@@ -64,7 +64,7 @@ fun DIV.generateLinks() {
         }
 
         div {
-            classes = setOf("col-12", "col-sm-4", "mx-auto", "mt-2")
+            classes = setOf("col-12", "col-sm-6", "mx-auto", "mt-2")
             a{
                 href = "https://www.instagram.com/hsnu_crc/"
                 img {
@@ -76,14 +76,26 @@ fun DIV.generateLinks() {
         }
 
         div {
-            classes = setOf("col-12", "col-sm-4", "mx-auto", "mt-2")
+            classes = setOf("col-12", "col-sm-6", "mx-auto", "mt-2")
             a{
-                href = "https://www.crc.hs.ntnu.edu.tw:8080/"
+                href = "https://oj.crc.hs.ntnu.edu.tw/"
                 img {
                     src = "img/crcoj.svg"
                     width = "30"
                 }
                 +" CRC OJ"
+            }
+        }
+
+        div {
+            classes = setOf("col-12", "col-sm-6", "mx-auto", "mt-2")
+            a{
+                href = "https://forms.gle/oARanR9dbhxe84qB6"
+                img {
+                    src = "img/document.svg"
+                    width = "30"
+                }
+                +" 地社報名"
             }
         }
     }
