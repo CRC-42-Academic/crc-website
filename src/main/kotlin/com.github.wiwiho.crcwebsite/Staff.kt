@@ -9,7 +9,7 @@ fun generateStaff(): String {
             +"幹部介紹"
         }
         p {
-            +"施工中"
+            +"敬請期待"
         }
     }
 }

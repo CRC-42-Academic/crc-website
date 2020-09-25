@@ -9,7 +9,7 @@ fun generateAchievement(): String {
             +"成果發表"
         }
         p {
-            +"施工中"
+            +"敬請期待"
         }
     }
 }
