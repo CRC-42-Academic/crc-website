@@ -8,6 +8,7 @@ fun DIV.generateCard(
     target: String,
     location: String,
     image: String,
+    moreInfo: String = "",
     content: DIV.() -> Unit
 ) {
 
@@ -33,6 +34,16 @@ fun DIV.generateCard(
             div {
                 classes = setOf("card-text", "col-9", "col-md-10")
                 content()
+                if (moreInfo != ""){
+                    div {
+                        classes = setOf("text-right")
+                        a {
+                            classes = setOf("btn", "btn-dark", "rounded")
+                            href = moreInfo
+                            +"課程資訊"
+                        }
+                    }
+                }
             }
         }
 
@@ -95,7 +106,8 @@ fun generateActivity(): String {
             +"社團博覽會在每年新生訓練的最後一天下午舉行，每個社團都會利用這個時間讓新生認識自己。電算社在社團博覽會時，"
             +"會在電腦教室展示社員的作品，社員也會在那裡和新生聊天。"
         }
-        generateCard("上學期大社課 — C++ 與程式語言導論", "每週五第七節課", "正社社員", "電腦教室", "cpp.svg") {
+        generateCard("上學期大社課 — C++ 與程式語言導論", "每週五第七節課", "正社社員", "電腦教室", "cpp.svg",
+            "https://hackmd.io/@wiwiho/crc1091cpp") {
             +"大社課指的就是每週五下午的社團課。大社課主要的內容是 C++，包含判斷、迴圈等基礎語法，還有 STL 的使用，"
             +"在大社課除了可以學習 C++ 以外，也可以學到資訊的基本知識。大社課的目的是讓學員對程式語言有初步的認識，"
             +"讓學員在上完之後，可以靠自己的能力學會其他程式語言。"
@@ -104,15 +116,13 @@ fun generateActivity(): String {
             +"競技程式指的是演算法競賽，包含資訊學科能力競賽、資訊奧林匹亞和 APCS，都是屬於競技程式的範疇。"
             +"在這門課中，學員可以學到各種演算法，和解題的思路。"
         }
-        generateCard("小社課 — Python", "偶爾週四 17:10-18:00", "社員", "未定", "python.svg") {
+        generateCard("小社課 — Python", "偶爾週四 17:10-18:00", "社員", "未定", "python.svg",
+            "https://hackmd.io/@penguin71630/2020CRCPythonSchedule") {
             +"Python 是近年相當流行的程式語言，經常被應用在許多領域，例如網頁爬蟲、人工智慧等等。"
             +"這門課會讓學員學到 Python 的語法和各種模組的使用。"
         }
         generateCard("秋烤", "未定", "社員", "未定", "bbq.svg") {
             +"秋烤是認識其他社員的好時機，大家會一起到外面烤肉，增進彼此的感情。"
-        }
-        generateCard("秋遊", "未定", "社員", "中央研究院", "academia.svg") {
-            +"每年十月都有中研院開放日，這天電算社的社員們會一起去參加這個一年一度的活動。"
         }
         generateCard("寒訓", "未定", "社員", "未定", "laptop.svg") {
             +"寒訓是三天兩夜的活動，這三天中除了有學術課程外，也有 RPG 之類的活動，更是好好認識其他人的好機會。"
