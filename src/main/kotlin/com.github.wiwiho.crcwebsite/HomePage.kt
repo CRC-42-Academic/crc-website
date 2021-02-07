@@ -78,7 +78,7 @@ fun DIV.generateLinks() {
         div {
             classes = setOf("col-12", "col-sm-6", "mx-auto", "mt-2")
             a{
-                href = "https://oj.crc.hs.ntnu.edu.tw/"
+                href = "https://oj.crc.cnmc.tw/"
                 img {
                     src = "img/crcoj.svg"
                     width = "30"
